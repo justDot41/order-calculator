@@ -109,3 +109,37 @@ li {
     display: inline-block;
     margin: 0.3rem;
 }
+
+/* Dish counts spacing */
+.dish-counts {
+    margin: 1rem 0 1rem; /* Added bottom margin */
+}
+
+/* Navigation buttons */
+.nav-button {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    padding: 0.70rem 1.5rem;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.nav-button:hover {
+    opacity: 0.9;
+}
+
+/* Admin navigation */
+.admin-nav {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.admin-nav .nav-button {
+    flex: 1;
+    text-align: center;
+}
