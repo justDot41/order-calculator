@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Замовлення для доставки</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="summary-container">
+        <h1>Поточні замовлення</h1>
+        
+        <section class="totals">
+            <h2>Загальні показники</h2>
+            <ul id="dishTotals"></ul>
+            <div class="grand-total">Загальна сума: <span id="grandTotal">0</span> грн</div>
+        </section>
+
+        <section class="orders-list">
+            <h2>Деталі замовлень</h2>
+            <div id="ordersContainer"></div>
+        </section>
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="delivery.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма замовлення</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="form-container">
+        <h1>Зробити замовлення</h1>
+        
+        <label>Ім’я:
+            <input type="text" id="clientName" required>
+        </label>
+
+        <div class="dishes-section">
+            <h3>Виберіть страви:</h3>
+            <div class="dish-selects">
+                <select class="dish-select"></select>
+                <select class="dish-select"></select>
+                <select class="dish-select"></select>
+            </div>
+        </div>
+
+        <label>Коментар:
+            <textarea id="comment" placeholder="Наприклад: без часнику"></textarea>
+        </label>
+
+        <div class="total-display">Загалом: <span id="totalAmount">0</span> грн</div>
+        <div class="dish-counts"></div>
+        <button id="submitOrder">Надіслати</button>
+        <p class="instruction">Передайте вказану суму доставщику готівкою</p>
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="order.js"></script>
+</body>
+</html>
