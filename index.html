@@ -2,6 +2,7 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Форма замовлення</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -27,7 +28,7 @@
         </label>
 
         <div class="total-display">Загалом: <span id="totalAmount">0</span> грн</div>
-        <div class="dish-counts"></div>
+        <div class="dish-counts" role="region" aria-label="Вибрані страви"></div>
         <button id="submitOrder">Надіслати</button>
         <!-- Add after submit button -->
         <a href="delivery.html" class="nav-button">Перейти до доставки</a>

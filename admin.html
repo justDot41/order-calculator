@@ -2,6 +2,7 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Адмін-панель</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -29,6 +30,7 @@
         <section class="order-logs">
             <h2>Історія замовлень</h2>
             <div id="orderLogs"></div>
+            <button onclick="deleteAllOrders()" class="delete-button">Видалити всі замовлення</button>
         </section>
     </main>
 
@@ -36,5 +38,18 @@
     <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
     <script src="firebase-config.js"></script>
     <script src="admin.js"></script>
+    <style>
+        .dish-list, .order-logs {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .dish-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding: 0.75rem 0;
+        }
+    </style>
 </body>
 </html>

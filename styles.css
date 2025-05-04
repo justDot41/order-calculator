@@ -144,3 +144,20 @@ li {
     flex: 1;
     text-align: center;
 }
+
+.delete-button {
+    background: #ff3b30;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.delete-button:hover {
+    opacity: 0.9;
+}

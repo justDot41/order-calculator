@@ -78,4 +78,20 @@ document.addEventListener("DOMContentLoaded", () => {
             orderLogs.appendChild(div);
         });
     });
+
+    window.deleteAllOrders = () => {
+        const password = prompt("Підтвердіть паролем адміністратора:");
+        if (password === ADMIN_PASSWORD) {
+            if (confirm("Ви впевнені, що хочете видалити ВСІ замовлення?")) {
+                db.collection("orders").get().then(snapshot => {
+                    snapshot.forEach(doc => {
+                        doc.ref.delete();
+                    });
+                    alert("Всі замовлення видалено");
+                });
+            }
+        } else {
+            alert("Неправильний пароль");
+        }
+    };
 });
